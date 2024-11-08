@@ -1,0 +1,168 @@
+/* Task 1: Applying Custom Fonts using @font-face */
+@font-face {
+    font-family: 'font pertama';
+    font-weight: 100;
+    font-style: normal;
+    src: url('../fonts/RubikWetPaint-Regular.ttf') format('truetype');
+}
+
+
+body {
+    font-family: 'font pertama', sans-serif;
+    margin: 0px 10px;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* General Styling */
+h1, h2 {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Task 2: Text Shadow and List Style */
+h1 {
+    font-size: 4em;
+    text-shadow: 4px 5px 2px #000;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover effect for h1 */
+h1:hover {
+    color: #00ff00;
+    text-shadow: 4px 5px 2px #7f00f5;
+}
+
+ul {
+    list-style: square inside;
+    padding-left: 20px;
+}
+
+.text-shadow-example {
+    text-shadow: 1px 1px 3px #333;
+}
+
+/* Task 3: Advanced Text Formatting & Layout */
+p::first-letter {
+    font-size: 1.5em;
+    /* float: inline-start; */
+    margin-right: 2px;
+    color: #00ff2a;
+}
+
+.highlighted-text {
+    background-color: #be0ff3;
+    padding: 2px 4px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for highlighted text */
+.highlighted-text:hover {
+    background-color: #028afa;
+}
+
+/* Task 4: Responsive Background Image */
+.hero-section {
+    background-image: url('images/background-image.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+    position: relative;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Animation for hero-section */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Task 5: Responsive Images with picture, source, and srcset */
+picture img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for picture img */
+picture img:hover {
+    transform: scale(1.05);
+}
+
+/* Task 6: Advanced Background Techniques */
+.gradient-background {
+    background: linear-gradient(to right, #ff6600, #ff99cc);
+    padding: 30px 20px;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.decorative-background {
+    position: relative;
+}
+
+.decorative-background::before {
+    content: '';
+    background-image: url('images/decorative-background.jpg');
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.2;
+    z-index: -1;
+    animation: slideBackground 5s infinite alternate;
+}
+
+/* Animation for decorative background */
+@keyframes slideBackground {
+    from { transform: translateX(0); }
+    to { transform: translateX(-10%); }
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    z-index: 1;
+    transition: background-color 0.3s;
+}
+
+footer:hover {
+    background-color: #444;
+}
+
+/* Hover transition for links */
+a {
+    color: #ff6600;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #ff99cc;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .hero-section {
+        padding: 30px 10px;
+    }
+
+    .intro-text {
+        font-size: 1em;
+    }
+}
